@@ -1,0 +1,33 @@
+<!-- <h1>This is the new homepage</h1>
+
+{{ password }} -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<div class = "container text-center">
+    
+    <h1>Random Password Creator</h1>
+    <!-- <form action="password"> -->
+    <form action = "{% url 'password' %}">
+    <h6><font color = "red">Default length is 10.</font></h6>
+    Select the length of password: 
+        <select name = "length">
+            <option value = "6">6</option>
+            <option value = "7">7</option>
+            <option value = "8">8</option>
+            <option value = "9">9</option>
+            <option value = "10" selected = "selected">10</option>
+            <option value = "11">11</option>
+            <option value = "12">12</option>
+            <option value = "13">13</option>
+            <option value = "14">14</option>
+            <option value = "15">15</option>
+        </select><br>
+        Check this if password should contain uppercase: <input type = "checkbox" name = "uppercase"><br>
+
+        Check this if password should contain numbers: <input type = "checkbox" name = "numbers"><br>
+
+        Check this if password should contain special characters: <input type = "checkbox" name = "spclchar"><br>
+        <input type = "submit" value = "Create Password" class = "btn btn-primary">
+
+        <h4>To know more about us, please click on our <a href = "{% url 'about' %}">about page</a></h4>
+    </form>
+</div>
